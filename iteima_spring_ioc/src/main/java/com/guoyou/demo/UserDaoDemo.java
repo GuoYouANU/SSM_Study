@@ -8,7 +8,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class UserDaoDemo {
     public static void main(String[] args) {
         ApplicationContext app = new ClassPathXmlApplicationContext("applicationContext.xml");
-        UserDao userDao = (UserDao) app.getBean("UserDao");
+        UserDao userDao = (UserDao) app.getBean("userDao");
         userDao.save();
     }
 }
