@@ -3,7 +3,22 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="userDao" class="com.guoyou.dao.impl.UserDaoImpl">
+    <!--    无参方法注入-->
+    <!--    <bean id="userDao" class="com.guoyou.dao.impl.UserDaoImpl" init-method="init" destroy-method="destory">-->
+
+    <!--    </bean>-->
+
+    <!--    静态方法注入-->
+    <!--    <bean id="userDao" class="com.guoyou.factory.StaticFactory" factory-method="getUserDao">-->
+
+    <!--    </bean>-->
+
+    <bean id="factory" class="com.guoyou.factory.DynamicFactory">
 
     </bean>
+
+    <bean id="userDao" factory-bean="factory" factory-method="getUserDao">
+
+    </bean>
+
 </beans>

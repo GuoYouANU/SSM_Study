@@ -1,2 +1,17 @@
-package com.guoyou.test;public class SpringTest {
+package com.guoyou.test;
+
+import com.guoyou.dao.UserDao;
+import org.junit.Test;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class SpringTest {
+
+    //测试scope属性
+    @Test
+    public void test1(){
+        ApplicationContext app = new ClassPathXmlApplicationContext("applicationContext.xml");
+        UserDao userDao1 = (UserDao) app.getBean("userDao");
+        System.out.println(userDao1);
+    }
 }
