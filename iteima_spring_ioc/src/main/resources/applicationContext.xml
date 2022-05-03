@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!--    无参方法注入-->
@@ -13,13 +14,22 @@
 
     <!--    </bean>-->
 
-<!--    动态工厂，注入工厂的bean，再注入userDao的bean-->
-    <bean id="factory" class="com.guoyou.factory.DynamicFactory">
+    <!--&lt;!&ndash;    动态工厂，注入工厂的bean，再注入userDao的bean&ndash;&gt;-->
+    <!--    <bean id="factory" class="com.guoyou.factory.DynamicFactory">-->
 
+    <!--    </bean>-->
+
+    <!--    <bean id="userDao" factory-bean="factory" factory-method="getUserDao">-->
+
+    <!--    </bean>-->
+
+<!--    注入Dao-->
+    <bean id="userDao" class="com.guoyou.dao.impl.UserDaoImpl"></bean>
+
+<!--    注入Service-->
+    <bean id="userService" class="com.guoyou.service.UserServiceImpl">
+        <property name="userDao" ref="userDao"></property>
     </bean>
 
-    <bean id="userDao" factory-bean="factory" factory-method="getUserDao">
-
-    </bean>
 
 </beans>

@@ -1,4 +1,5 @@
 package com.guoyou.service;
 
-public class UserService {
+public interface UserService {
+    public void save();
 }
