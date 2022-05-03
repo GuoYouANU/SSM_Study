@@ -23,13 +23,57 @@
 
     <!--    </bean>-->
 
-<!--    注入Dao-->
-    <bean id="userDao" class="com.guoyou.dao.impl.UserDaoImpl"></bean>
+    <!--    注入Dao-->
+    <bean id="userDao" class="com.guoyou.dao.impl.UserDaoImpl">
+        <property name="username" value="zhangsan"></property>
+        <property name="age" value="18"></property>
 
-<!--    注入Service-->
-    <bean id="userService" class="com.guoyou.service.UserServiceImpl">
-        <property name="userDao" ref="userDao"></property>
+        <property name="stringList">
+            <list>
+                <value>aaa</value>
+                <value>bbb</value>
+                <value>ccc</value>
+            </list>
+        </property>
+
+        <property name="userMap">
+            <map>
+                <entry key="tom" value-ref="user1"></entry>
+                <entry key="jack" value-ref="user2"></entry>
+            </map>
+        </property>
+
+        <property name="properties">
+            <props>
+                <prop key="p1">ppp1</prop>
+                <prop key="p2">ppp2</prop>
+                <prop key="p3">ppp3</prop>
+            </props>
+        </property>
     </bean>
 
+    <bean id="user1" class="com.guoyou.domian.User">
+        <property name="name" value="tom"></property>
+        <property name="address" value="beijing"></property>
+    </bean>
+
+    <bean id="user2" class="com.guoyou.domian.User">
+        <property name="name" value="jack"></property>
+        <property name="address" value="nanjing"></property>
+    </bean>
+
+    <!--        1.set注入Service-->
+    <!--    <bean id="userService" class="com.guoyou.service.UserServiceImpl">-->
+    <!--        <property name="userDao" ref="userDao"></property>-->
+    <!--    </bean>-->
+
+    <!--    p命名空间注入-->
+    <!--    <bean id="userService" class="com.guoyou.service.UserServiceImpl" p:userDao-ref="userDao">-->
+    <!--    </bean>-->
+
+    <!--    2.构造方法注入-->
+    <bean id="userService" class="com.guoyou.service.UserServiceImpl">
+        <constructor-arg name="userDao" ref="userDao"></constructor-arg>
+    </bean>
 
 </beans>
