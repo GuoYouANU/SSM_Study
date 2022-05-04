@@ -73,7 +73,10 @@
 
     <!--    2.构造方法注入-->
     <bean id="userService" class="com.guoyou.service.UserServiceImpl">
-        <constructor-arg name="userDao" ref="userDao"></constructor-arg>
+        <constructor-arg name="userDao" ref="userDao"/>
     </bean>
+
+    <import resource="applicationContext-user.xml"/>
+    <import resource="applicationContext-product.xml"/>
 
 </beans>

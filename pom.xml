@@ -10,6 +10,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>iteima_spring_ioc</module>
+        <module>itheima_spring_anno</module>
     </modules>
 
     <properties>
