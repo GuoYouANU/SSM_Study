@@ -8,12 +8,12 @@
     <!--加载外部的properties文件-->
     <context:property-placeholder location="classpath:jdbc.properties"/>
 
-    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
-        <property name="driverClass" value="${jdbc.driver}"/>
-        <property name="jdbcUrl" value="${jdbc.url}"/>
-        <property name="user" value="${jdbc.username}"/>
-        <property name="password" value="${jdbc.password}"/>
-    </bean>
+<!--    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">-->
+<!--        <property name="driverClass" value="${jdbc.driver}"/>-->
+<!--        <property name="jdbcUrl" value="${jdbc.url}"/>-->
+<!--        <property name="user" value="${jdbc.username}"/>-->
+<!--        <property name="password" value="${jdbc.password}"/>-->
+<!--    </bean>-->
 
 <!--    已经通过注解形式注入-->
 <!--    <bean id="userDao" class="com.guoyou.dao.impl.UserDaoImpl"/>-->
@@ -23,6 +23,6 @@
 <!--    </bean>-->
 
 <!--    配置组件扫描-->
-    <context:component-scan base-package="com.guoyou"/>
+<!--    <context:component-scan base-package="com.guoyou"/>-->
 
 </beans>
