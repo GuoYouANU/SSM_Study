@@ -69,13 +69,5 @@ public class DataSourceTest {
         Connection connection = dataSource.getConnection();
         System.out.println(connection);
         connection.close();
-//        ComboPooledDataSource dataSource = new ComboPooledDataSource();
-//        dataSource.setDriverClass("com.mysql.cj.jdbc.Driver");
-//        dataSource.setJdbcUrl("jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai");
-//        dataSource.setUser("root");
-//        dataSource.setPassword("980105gy");
-//        Connection connection = dataSource.getConnection();
-//        System.out.println(connection);
-//        connection.close();
     }
 }
