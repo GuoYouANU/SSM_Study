@@ -15,14 +15,13 @@
         <property name="password" value="${jdbc.password}"/>
     </bean>
 
-<!--    已经通过注解形式注入-->
-    <bean id="userDao" class="com.guoyou.dao.impl.UserDaoImpl"/>
+    <!--    已经通过注解形式注入-->
+    <bean id="userDao" class="com.guoyou.dao.Impl.UserDaoImpl"/>
 
-    <bean id="userService" class="com.guoyou.service.impl.UserServiceImpl">
+    <bean id="userService" class="com.guoyou.service.Impl.UserServiceImpl">
         <property name="userDao" ref="userDao"/>
     </bean>
 
-<!--    配置组件扫描-->
-<!--    <context:component-scan base-package="com.guoyou"/>-->
-
+    <!--    配置组件扫描-->
+    <!--    <context:component-scan base-package="com.guoyou"/>-->
 </beans>

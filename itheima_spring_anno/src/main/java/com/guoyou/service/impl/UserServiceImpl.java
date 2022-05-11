@@ -31,9 +31,9 @@ public class UserServiceImpl implements UserService {
     private UserDao userDao;
 
     //注解方式不需要谢set方法，xml方式需要写set方法
-//    public void setUserDao(UserDao userDao) {
-//        this.userDao = userDao;
-//    }
+    public void setUserDao(UserDao userDao) {
+        this.userDao = userDao;
+    }
 
     @Override
     public void save() {

@@ -11,6 +11,7 @@
     <modules>
         <module>iteima_spring_ioc</module>
         <module>itheima_spring_anno</module>
+        <module>itheima_spring_mvc</module>
     </modules>
 
     <properties>

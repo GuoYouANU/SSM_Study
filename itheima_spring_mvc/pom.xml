@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>itheima_spring_anno</artifactId>
+    <artifactId>itheima_spring_mvc</artifactId>
 
     <dependencies>
         <dependency>
@@ -31,7 +31,7 @@
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.13.1</version>
-<!--            <scope>test</scope>-->
+            <!--            <scope>test</scope>-->
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>

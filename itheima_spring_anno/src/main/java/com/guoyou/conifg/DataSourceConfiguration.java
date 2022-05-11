@@ -16,7 +16,7 @@ public class DataSourceConfiguration {
 
     @Value("${jdbc.driver}")
     private String driver;
-    @Value("${jdbc.}")
+    @Value("${jdbc.url}")
     private String url;
     @Value("${jdbc.username}")
     private String username;
